@@ -45,3 +45,18 @@ void pinSetup(void) {
   Serial.begin(9600);
   return;
 }
+
+void waitBtn(int btn){
+  while(true){
+    if(digitalRead(btn) == 1){
+      while(true){
+        if(digitalRead(btn) == 0){ 
+          break;
+        }
+      }
+      break;
+    }
+  }
+
+  return;
+}

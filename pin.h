@@ -13,5 +13,6 @@ extern const unsigned short int dirPin[2];
 
 //Function
 void pinSetup(void);
+void waitBtn(int);
 
 #endif

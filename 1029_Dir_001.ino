@@ -12,19 +12,9 @@ void setup() {
   dirSetup();
   displaySetup();
 
-  while(true){
-    Serial.println("Press A to Set Opponent's Dir...");
-    if(digitalRead(btnPin[0]) == 1){
-      while(true){
-        if(digitalRead(btnPin[0]) == 0){
-          refreshDirRaw();
-          dirOpponent = dir;
-          break;
-        }
-      }
-      break;
-    }
-  }
+  waitBtn(btnPin[0]);
+  refreshDirRaw();
+  dirOpponent = dir;
 }
 
 void loop() {
