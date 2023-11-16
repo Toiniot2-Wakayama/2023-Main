@@ -110,17 +110,10 @@ void motor(float m1, float m2, float m3, float m4){
     m4 = m4<-100 ? -100 : m4;
 
     // Output PWM
-    /*
-    analogWrite(motorPin[0][2], (int) fabsf(m1*256*0.01));
-    analogWrite(motorPin[1][2], (int) fabsf(m2*256*0.01));
-    analogWrite(motorPin[2][2], (int) fabsf(m3*256*0.01));
-    analogWrite(motorPin[3][2], (int) fabsf(m4*256*0.01));
-    */
-
-    analogWrite(motorPin[0][2], 256);
-    analogWrite(motorPin[1][2], 256);
-    analogWrite(motorPin[2][2], 256);
-    analogWrite(motorPin[3][2], 256);
+    analogWrite(motorPin[0][2], (int) fabsf(m1*255*0.01));
+    analogWrite(motorPin[1][2], (int) fabsf(m2*255*0.01));
+    analogWrite(motorPin[2][2], (int) fabsf(m3*255*0.01));
+    analogWrite(motorPin[3][2], (int) fabsf(m4*255*0.01));
 
     // Output H/L
     if(m1 < 0){
